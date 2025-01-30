@@ -31,7 +31,7 @@ const Home = () => {
           href="/products"
           sx={{ marginTop: 3, fontSize: '1.2rem' }}
         >
-          View Products
+          START NOW
         </Button>
       </Container>
     </Box>

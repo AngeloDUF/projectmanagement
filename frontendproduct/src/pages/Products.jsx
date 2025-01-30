@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Container, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 import axios from 'axios';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/"); // Si no hay token, redirige al login
+    } else {
+      fetchProducts();
+    }
+  }, [navigate]);
 
   // Función para obtener productos
   const fetchProducts = async () => {
@@ -82,5 +88,4 @@ const Products = () => {
 };
 
 export default Products;
-
 
