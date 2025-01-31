@@ -1,0 +1,28 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - feature/authservice  # Cambia esto a la rama en la que trabajas
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Usar un entorno Ubuntu para el flujo de trabajo
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Descargar el código del repositorio
+
+      - name: Set up SSH for EC2
+        uses: webfactory/ssh-agent@v0.5.3  # Usamos un agente SSH para conectar con EC2
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}  # Clave privada SSH almacenada en los secretos
+
+      - name: Deploy changes to EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no ec2-user@ec2-XX-XXX-XXX-XXX.compute-1.amazonaws.com << 'EOF'
+            cd /path/to/ReadyBear/authservice  # Ajusta la ruta a tu servicio en EC2
+            git pull origin feature/authservice  # Actualiza el repositorio con los últimos cambios
+            npm install  # Instalar las dependencias
+            npm start  # Iniciar el servicio
+          EOF
