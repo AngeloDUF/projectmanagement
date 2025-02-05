@@ -186,8 +186,6 @@ Instructions on how to use the microservices will be added here.
 Contributions, issues, and feature requests are welcome!
 
 ## 📜 License <a name = "license"></a>
-This project is licensed under the MIT License.
-
 <!-- MARKDOWN LINKS & IMAGES -->
 [Node.js]: https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node.js-url]: https://nodejs.org/
