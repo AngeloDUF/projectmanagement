@@ -198,3 +198,12 @@ This project is licensed under the MIT License.
 [ASP.NET]: https://img.shields.io/badge/ASP.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white
 [ASP.NET-url]: https://dotnet.microsoft.com/apps/aspnet
 [GraphQL]: https://img.shields.io/badge/graphql-E10098?style=for-the-badge&logo=graphql&logoColor=white
+[GraphQL-url]: https://graphql.org/
+[MongoDB]: https://img.shields.io/badge/mongodb-47A248?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[MySQL]: https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white
+[MySQL-url]: https://www.mysql.com/
+[GoogleCloudPubSub]: https://img.shields.io/badge/Google_Cloud_Pub/Sub-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white
+[GoogleCloudPubSub-url]: https://cloud.google.com/pubsub
+[JWT]: https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white
+[JWT-url]: https://jwt.io/
